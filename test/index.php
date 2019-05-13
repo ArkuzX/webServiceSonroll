@@ -1,5 +1,5 @@
 <?php
-    $path = "http://192.168.0.16/service/examples/test/WebServiceProducto.php/";
+    $path = "http://localhost/service/examples/test/WebServiceProducto.php/";
 
     $data = file_get_contents($path);
     $json = json_decode($data, true);
@@ -19,7 +19,7 @@
 
         $context  = stream_context_create($options);
         $result = file_get_contents($url, false, $context);*/
-        $paths = "http://192.168.0.16/service/examples/test/WebServiceAddProducto.php/usuario/ura/telefono/correo";
+        $paths = "http://localhost/service/examples/test/WebServiceAddProducto.php/usuario/".$_POST['nombre']."/".$_POST['telefono']."/".$_POST['correo']."";
 
         $datas = file_get_contents($paths);
     }
